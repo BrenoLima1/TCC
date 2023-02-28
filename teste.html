@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tirar Foto</title>
 </head>
 <body>
-oi
+  <div id="camera">
+    <video id="video" width="640" height="480"></video>
+    <button id="snap">Tirar Foto</button>
+  </div>
+  <div id="output" style="display: none;"></div>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.createElement('canvas');
+    const snap = document.getElementById('snap');
+    const output = document.getElementById('output');
+    const constraints = { video: true };
+
+    navigator.mediaDevices.getUserMedia(constraints)
+      .then(function(stream) {
+        video.srcObject = stream;
+        video.play();
+        output.style.display = "block"; // Mostra o elemento que contém a imagem
+      })
+      .catch(function(err) {
+        console.log("Ocorreu um erro ao acessar a câmera: " + err);
+      });
+
+    snap.addEventListener('click', function() {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+      const dataURL = canvas.toDataURL('image/png');
+      const img = new Image();
+      img.src = dataURL;
+      output.appendChild(img);
+    });
+  </script>
 </body>
 </html>
