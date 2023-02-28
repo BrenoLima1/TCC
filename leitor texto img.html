@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesseract.js</title>
+</head>
+<body>
+  <input type="file" id="fileInput">
+  <button id="convertButton">Converter</button>
+  <div id="output"></div>
+
+  <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const convertButton = document.getElementById('convertButton');
+    const output = document.getElementById('output');
+
+    fileInput.addEventListener('change', function() {
+      output.innerText = '';
+    });
+
+    convertButton.addEventListener('click', function() {
+      if (!fileInput.files.length) {
+        output.innerText = 'Nenhum arquivo selecionado.';
+        return;
+      }
+
+      const file = fileInput.files[0];
+
+      if (!file.type.startsWith('image/')) {
+        output.innerText = 'O arquivo selecionado não é uma imagem.';
+        return;
+      }
+
+      Tesseract.recognize(file)
+        .then(function(result) {
+          const text = result.text;
+          const blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, "output.txt");
+          output.innerText = 'Texto extraído com sucesso!';
+        })
+        .catch(function(err) {
+          console.log(err);
+          output.innerText = 'Ocorreu um erro ao extrair texto da imagem.';
+        });
+    });
+  </script>
+</body>
+</html>
