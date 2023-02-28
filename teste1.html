@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de Tarefas</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		h1 {
+			text-align: center;
+		}
+		form {
+			display: flex;
+			margin-bottom: 10px;
+		}
+		input[type="text"] {
+			flex: 1;
+			padding: 10px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		button {
+			background-color: #008cba;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 18px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #0077a3;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		li {
+			padding: 10px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Lista de Tarefas</h1>
+
+	<form>
+		<input type="text" id="txtTarefa" placeholder="Digite uma tarefa...">
+		<button id="btnAdicionar" type="button">Adicionar</button>
+	</form>
+
+	<ul id="listaTarefas"></ul>
+
+	<script src="index.js"></script>
+</body>
+</html>
