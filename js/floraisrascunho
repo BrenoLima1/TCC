@@ -1,0 +1,78 @@
+// Model
+class Model {
+    constructor() {
+        this.data = {
+            questions: [
+                { category: 'medo', text: 'Simplesmente entro em estado de pânico. Não consigo me mover quando tenho certos pensamentos.' },
+                { category: 'medo', text: 'Temo coisas ruins existentes no mundo real, como dor, doenças, acidentes, pobreza, escuro, entre outros acontecerem comigo.' },
+                { category: 'medo', text: 'Temo seguir pensamentos e impulsos e fazer coisas que sei que são erradas.' },
+                { category: 'medo', text: 'Sinto de que algo terrível vai acontecer, mas não sei exatamente o que.' },
+                { category: 'medo', text: 'Temo que aqueles que amo sofram. Antecipo que algo desafortunado lhes aconteça.' },
+                { category: 'incerteza', text: 'Não tenho autoconfiança suficiente para tomar minhas próprias decisões. Constantemente procuro o conselho dos outros, sendo frequentemente mal orientado/a.' },
+                { category: 'incerteza', text: 'Sou incapaz de decidir entre duas ou mais opções.' },
+                { category: 'incerteza', text: 'Sou facilmente desencorajado/a. Qualquer pequeno atraso ou obstáculo ao meu progresso causa dúvida e desânimo.' },
+                { category: 'incerteza', text: 'Sinto grande desesperança. Não acredito que possa fazer algo.' },
+                { category: 'incerteza', text: 'Não possuo força física e/ou mental o suficiente para carregar o fardo da vida. Alguma parte de minha mente e/ou meu corpo deve ser fortalecida antes que eu possa facilmente completar meu trabalho.' },
+                { category: 'incerteza', text: 'Apesar de desejar alcançar um alto nível de sucesso, reconhecimento ou fama, possuo dificuldade em determinar qual ocupação seguir.' },
+                // ... other questions
+            ],
+        };
+    }
+
+    getQuestionsByCategory(category) {
+        return this.data.questions.filter(q => q.category === category);
+    }
+    // ... other model methods
+}
+
+// View
+class View {
+    createButtonWithText(text) {
+        const button = document.createElement('button');
+        button.innerText = text;
+        return button;
+    }
+
+    createListFromElements(elements) {
+        const list = document.createElement('ol');
+        elements.forEach(element => {
+            const listItem = document.createElement('li');
+            listItem.appendChild(element);
+            list.appendChild(listItem);
+        });
+        return list;
+    }
+    // ... other view methods
+}
+
+// Controller
+class Controller {
+    constructor(model, view) {
+        this.model = model;
+        this.view = view;
+    }
+
+    init() {
+        this.bindEvents();
+    }
+
+    bindEvents() {
+        document.getElementById('medo').addEventListener('click', () => this.handleCategoryClick('medo'));
+        document.getElementById('incerteza').addEventListener('click', () => this.handleCategoryClick('incerteza'));
+        // ... bind other events
+    }
+
+    handleCategoryClick(category) {
+        const questions = this.model.getQuestionsByCategory(category);
+        const buttons = questions.map(q => this.view.createButtonWithText(q.text));
+        const list = this.view.createListFromElements(buttons);
+        // ... append list to DOM, remove old elements, etc.
+    }
+    // ... other controller methods
+}
+
+const model = new Model();
+const view = new View();
+const controller = new Controller(model, view);
+
+controller.init();
