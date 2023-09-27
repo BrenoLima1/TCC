@@ -16,7 +16,7 @@ class Controller {
         document.getElementById('incerteza').addEventListener('click', () => this.handleCategoryClick('incerteza'));
         document.getElementById('dPresente').addEventListener('click', () => this.handleCategoryClick('desinteresseNoPresente'));
         document.getElementById('solidao').addEventListener('click', () => this.handleCategoryClick('solidao'));
-        document.getElementById('sInfluenciaEIdeias').addEventListener('click', () => this.handleCategoryClick('sensivelAInfluenciasEIdeias'));
+        document.getElementById('sensivelAInfluenciasEIdeias').addEventListener('click', () => this.handleCategoryClick('sensivelAInfluenciasEIdeias'));
         document.getElementById('desanimoOuDesespero').addEventListener('click', () => this.handleCategoryClick('desanimoOuDesespero'));
         document.getElementById('preocupacaoBemEstarAlheio').addEventListener('click', () => this.handleCategoryClick('preocupacaoBemEstarAlheio'));
         // ... bind other events
@@ -24,13 +24,22 @@ class Controller {
 
     handleCategoryClick(category) {
         const questions = this.model.obterCategoria(category);
-        const buttons = questions.map(q => this.view.criarBotaoComTexto(q.text));
+        const buttons = questions.map(q => this.view.criarBotaoComTextoEId(q.text,q.nome));
         const list = this.view.criarListaDeElementos(buttons);
         const body = document.querySelector('body');
         body.append(list);
+        this.alertFloral();
         // ... append list to DOM, remove old elements, etc.
     }
     // ... other controller methods
+
+    alertFloral(){
+        for (const button of document.querySelector('ol').childNodes) {
+            button.addEventListener('click', ()=>{
+                alert(button.firstChild.id);
+            });
+        }
+    }
 }
 
 const model = new Floral();
