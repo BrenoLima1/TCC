@@ -2,9 +2,12 @@ import { Floral } from "./Floral.js";
 import { FloralView } from "./FloralView.js";
 
 class Controller {
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
+     model;
+     view;
+
+    constructor() {
+        this.model = new Floral();
+        this.view = new FloralView();
     }
 
     init() {
@@ -22,12 +25,15 @@ class Controller {
         // ... bind other events
     }
 
-    handleCategoryClick(category) {
-        const questions = this.model.obterCategoria(category);
+    handleCategoryClick(categoria) {
+        const questions = this.model.obterCategoria(categoria);
         const buttons = questions.map(q => this.view.criarBotaoComTextoEId(q.text,q.nome));
         const list = this.view.criarListaDeElementos(buttons);
-        const body = document.querySelector('body');
-        body.append(list);
+        this.view.incorporarListaEBotao(list);
+        this.view.removerPerguntas();
+        this.view.criarBotaoVoltar();
+        this.view.alterarPergunta();
+        this.view.exibirPerguntasAoCLicarEmVoltar();
         this.alertFloral();
         // ... append list to DOM, remove old elements, etc.
     }
@@ -40,10 +46,9 @@ class Controller {
             });
         }
     }
+
 }
 
-const model = new Floral();
-const view = new FloralView();
-const controller = new Controller(model, view);
+const controller = new Controller();
 
 controller.init();

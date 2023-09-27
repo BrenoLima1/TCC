@@ -29,7 +29,7 @@ export class Floral{
 
                 { categoria: 'sensivelAInfluenciasEIdeias', text: 'Concordo em abrir mão de muito para não haver nenhuma briga ou discussão e escondo minhas preocupações por trás de humor e brincadeira.', nome: 'Agrimony' },
                 { categoria: 'sensivelAInfluenciasEIdeias', text: 'Sou excessivamente ansioso/a para servir aos outros, negligenciando minha própria missão particular na vida.', nome: 'Centaury' },
-                { categoria: 'sensivelAInfluenciasEIdeias', text: 'Embora eu tenha ideais ambiciosos na vida, às vezes sou tentado desviar de meus próprios ideais, metas e trabalho pelo entusiasmo, convicções ou opiniões fortes dos outros.', nome: 'Walnut' },
+                { categoria: 'sensivelAInfluenciasEIdeias', text: 'Embora eu tenha ideais ambiciosos na vida, às vezes sou tentado a desviar de meus próprios ideais, metas e trabalho pelo entusiasmo, convicções ou opiniões fortes dos outros.', nome: 'Walnut' },
                 { categoria: 'sensivelAInfluenciasEIdeias', text: 'Algumas vezes sou atacado/a por pensamentos dos tipos ciúmes, inveja, vingança, suspeição, entre outros. Dentro de mim sofro muito, mesmo quando não há uma causa real para minha infelicidade.', nome: 'Holly' },
 
                 { categoria: 'desanimoOuDesespero', text: 'Não me considero tão bom/boa ou capaz quanto aqueles ao meu redor, espero fracassar e sinto que nunca serei um sucesso, portanto não me arrisco ou não faço uma tentativa forte o suficiente para ter sucesso.', nome: 'Larch' },
