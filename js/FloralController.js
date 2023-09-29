@@ -2,8 +2,6 @@ import { Floral } from "./Floral.js";
 import { FloralView } from "./FloralView.js";
 
 class Controller {
-     model;
-     view;
 
     constructor() {
         this.model = new Floral();
@@ -33,16 +31,15 @@ class Controller {
         this.view.removerPerguntas();
         this.view.criarBotaoVoltar();
         this.view.alterarPergunta();
-        this.view.exibirPerguntasAoCLicarEmVoltar();
         this.alertFloral();
+        this.view.exibirPerguntasAoCLicarEmVoltar();
         // ... append list to DOM, remove old elements, etc.
     }
-    // ... other controller methods
 
     alertFloral(){
         for (const button of document.querySelector('ol').childNodes) {
-            button.addEventListener('click', ()=>{
-                alert(button.firstChild.id);
+            button.addEventListener('click', (event)=>{
+                this.view.criarDivComTexto(event.target);
             });
         }
     }
