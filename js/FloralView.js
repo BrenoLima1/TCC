@@ -7,11 +7,10 @@ export class FloralView{
         this.text = this.headerPergunta.innerText;
     }
 
-        criarBotaoComTextoEId(text, id) {
+        criarBotaoComTextoEId(text, idBotao) {
             const button = document.createElement('button');
 
-            button.innerText = text;
-            button.id = id;
+            Object.assign(button, {innerText: text, id: idBotao});
 
             return button;
         }
@@ -33,7 +32,6 @@ export class FloralView{
             this.body.append(list,this.criarBotaoVoltar());
         }
 
-        // ... other view methods
 
         removerPerguntas() {
             this.perguntas.remove();
@@ -42,14 +40,13 @@ export class FloralView{
         criarBotaoVoltar() {
             const botaoVoltar = document.createElement('button');
 
-            botaoVoltar.innerText = 'Voltar';
-            botaoVoltar.id = 'voltar';
+            Object.assign(botaoVoltar, {innerText: 'Voltar', id: 'voltar'});
 
             return botaoVoltar;
         }
 
         removerdiv(){
-            document.querySelector('div').remove();
+            document.getElementById('resultado').remove();
         }
 
         exibirPerguntasAoCLicarEmVoltar(){
@@ -68,10 +65,18 @@ export class FloralView{
         }
 
         criarDivComTexto(button){
-            const div = document.createElement('div');
+            const divResultado = document.createElement('div');
 
-            div.innerText = 'A essência floral mais indicada para esta situação é: \n' + button.id;
-            this.body.append(div);
+            Object.assign(divResultado, {innerText: 'A essência floral mais indicada para esta situação é: \n' + button.id, id: 'resultado'});
+
+            this.body.append(divResultado);
+        }
+
+        inserirFragmento(tagPai, tagFilha){
+            const fragment = document.createDocumentFragment();
+
+            fragment.appendChild(tagFilha);
+            tagPai.appendChild(fragment);
         }
 
     }
