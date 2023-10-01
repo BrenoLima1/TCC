@@ -9,6 +9,7 @@ export class FloralView{
     }
 
         criarBotaoComTextoEId(text, idBotao) {
+            // criarBotaoComTextoIdECategoria(text, idBotao, categoriaFLoral)
             const button = document.createElement('button');
 
             Object.assign(button, {innerText: text, id: idBotao});
@@ -52,7 +53,7 @@ export class FloralView{
         exibirPerguntasAoCLicarEmVoltar(){
             document.getElementById('voltar').addEventListener('click', (event)=>{
                 document.querySelector('ol').remove();
-                this.body.append(this.perguntas);
+                this.body.appendChild(this.perguntas);
                 this.headerPergunta.innerText = this.text;
 
                 event.target.remove();
@@ -69,7 +70,8 @@ export class FloralView{
 
             Object.assign(divResultado, {innerText: this.textoInicioResultado + button.id, id: 'resultado'});
 
-            this.body.append(divResultado);
+            this.body.insertBefore(divResultado,document.getElementById('voltar'));
+            // this.body.append(divResultado);
         }
 
         inserirFragmento(tagPai, tagFilha){
@@ -89,8 +91,20 @@ export class FloralView{
             listaItens.forEach(li => {
                 if(li.firstChild !== botaoSelecionado){
                     li.remove();
+                    botaoSelecionado.parentElement.style.listStyleType ='none';
+                    botaoSelecionado.disabled = 'true';
+                    botaoSelecionado.style.color = 'black';
+                    botaoSelecionado.style.fontWeight = '550';
+                    botaoSelecionado.style.fontSize = 'large';
                 }
             });
+        }
+
+        exibirFlor(target){
+            const img = document.createElement('img');
+
+            img.src = `../style/img/florais/${target.category}/${target.id}`;
+            this.body.appendChild(img);
         }
 
     }

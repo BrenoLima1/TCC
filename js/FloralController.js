@@ -26,20 +26,21 @@ class Controller {
         const questions = this.model.obterCategoria(categoria);
         const buttons = questions.map(q => this.view.criarBotaoComTextoEId(q.text,q.nome));
         const list = this.view.criarListaDeElementos(buttons);
+
         this.view.incorporarListaEBotao(list);
         this.view.removerPerguntas();
-        this.view.criarBotaoVoltar();
         this.view.alterarPergunta('Por quê?');
-        this.exibirFloral();
         this.view.exibirPerguntasAoCLicarEmVoltar();
+        this.exibirFloral();
     }
 
     exibirFloral(){
         for (const button of document.querySelector('ol').childNodes) {
-            button.addEventListener('click', (event)=>{
+            button.firstChild.addEventListener('click', (event)=>{
                 this.view.criarDivComTexto(event.target);
                 this.view.mudarCorBotaoSelecionado(event.target);
                 this.view.removerBotoesNaoSelecionados(event.target);
+                this.view.criarBotaoVoltar();
             });
         }
     }
