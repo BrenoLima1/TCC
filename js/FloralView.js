@@ -8,11 +8,10 @@ export class FloralView{
         this.textoInicioResultado = 'A essência floral mais indicada para esta situação é: \n';
     }
 
-        criarBotaoComTextoEId(text, idBotao) {
-            // criarBotaoComTextoIdECategoria(text, idBotao, categoriaFLoral)
+    criarBotaoComTextoIdECategoria(text, idBotao, categoria) {
             const button = document.createElement('button');
 
-            Object.assign(button, {innerText: text, id: idBotao});
+            Object.assign(button, {innerText: text, id: idBotao, class: categoria});
 
             return button;
         }
@@ -103,8 +102,8 @@ export class FloralView{
         exibirFlor(target){
             const img = document.createElement('img');
 
-            img.src = `../style/img/florais/${target.category}/${target.id}`;
-            this.body.appendChild(img);
+            img.src = `../style/img/florais/${target.class}/${target.id}.png`;
+            document.querySelector('div').appendChild(img);
         }
 
     }

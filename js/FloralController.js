@@ -24,7 +24,7 @@ class Controller {
 
     lidarComCategoriaAoClicar(categoria) {
         const questions = this.model.obterCategoria(categoria);
-        const buttons = questions.map(q => this.view.criarBotaoComTextoEId(q.text,q.nome));
+        const buttons = questions.map(q => this.view.criarBotaoComTextoIdECategoria(q.text,q.nome,q.categoria));
         const list = this.view.criarListaDeElementos(buttons);
 
         this.view.incorporarListaEBotao(list);
@@ -41,6 +41,7 @@ class Controller {
                 this.view.mudarCorBotaoSelecionado(event.target);
                 this.view.removerBotoesNaoSelecionados(event.target);
                 this.view.criarBotaoVoltar();
+                this.view.exibirFlor(event.target);
             });
         }
     }
