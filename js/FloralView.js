@@ -1,10 +1,11 @@
 export class FloralView{
 
     constructor() {
-        this.perguntas = document.getElementById('perguntas');
+        this.perguntas = document.getElementById('sentimentos');
         this.body = document.querySelector('body');
         this.headerPergunta = document.querySelector('h1');
         this.text = this.headerPergunta.innerText;
+        this.textoInicioResultado = 'A essência floral mais indicada para esta situação é: \n';
     }
 
         criarBotaoComTextoEId(text, idBotao) {
@@ -31,7 +32,6 @@ export class FloralView{
         incorporarListaEBotao(list){
             this.body.append(list,this.criarBotaoVoltar());
         }
-
 
         removerPerguntas() {
             this.perguntas.remove();
@@ -60,14 +60,14 @@ export class FloralView{
             });
         }
 
-        alterarPergunta(){
-            this.headerPergunta.innerText = 'Por quê?'
+        alterarPergunta(pergunta){
+            this.headerPergunta.innerText = pergunta;
         }
 
         criarDivComTexto(button){
             const divResultado = document.createElement('div');
 
-            Object.assign(divResultado, {innerText: 'A essência floral mais indicada para esta situação é: \n' + button.id, id: 'resultado'});
+            Object.assign(divResultado, {innerText: this.textoInicioResultado + button.id, id: 'resultado'});
 
             this.body.append(divResultado);
         }
@@ -77,6 +77,20 @@ export class FloralView{
 
             fragment.appendChild(tagFilha);
             tagPai.appendChild(fragment);
+        }
+
+        mudarCorBotaoSelecionado(botaoSelecionado){
+            botaoSelecionado.style.backgroundColor = '#979700';
+        }
+
+        removerBotoesNaoSelecionados(botaoSelecionado){
+            const listaItens = document.querySelectorAll('li');
+
+            listaItens.forEach(li => {
+                if(li.firstChild !== botaoSelecionado){
+                    li.remove();
+                }
+            });
         }
 
     }

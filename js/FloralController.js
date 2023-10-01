@@ -20,7 +20,6 @@ class Controller {
         document.getElementById('sensivelAInfluenciasEIdeias').addEventListener('click', () => this.lidarComCategoriaAoClicar('sensivelAInfluenciasEIdeias'));
         document.getElementById('desanimoOuDesespero').addEventListener('click', () => this.lidarComCategoriaAoClicar('desanimoOuDesespero'));
         document.getElementById('preocupacaoBemEstarAlheio').addEventListener('click', () => this.lidarComCategoriaAoClicar('preocupacaoBemEstarAlheio'));
-        // ... bind other events
     }
 
     lidarComCategoriaAoClicar(categoria) {
@@ -30,16 +29,17 @@ class Controller {
         this.view.incorporarListaEBotao(list);
         this.view.removerPerguntas();
         this.view.criarBotaoVoltar();
-        this.view.alterarPergunta();
+        this.view.alterarPergunta('Por quê?');
         this.exibirFloral();
         this.view.exibirPerguntasAoCLicarEmVoltar();
-        // ... append list to DOM, remove old elements, etc.
     }
 
     exibirFloral(){
         for (const button of document.querySelector('ol').childNodes) {
             button.addEventListener('click', (event)=>{
                 this.view.criarDivComTexto(event.target);
+                this.view.mudarCorBotaoSelecionado(event.target);
+                this.view.removerBotoesNaoSelecionados(event.target);
             });
         }
     }
