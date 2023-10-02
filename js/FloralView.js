@@ -11,7 +11,7 @@ export class FloralView{
     criarBotaoComTextoIdECategoria(text, idBotao, categoria) {
             const button = document.createElement('button');
 
-            Object.assign(button, {innerText: text, id: idBotao, classList: categoria});
+            Object.assign(button, {innerText: text, id: idBotao, class: categoria});
 
             return button;
         }
@@ -106,7 +106,7 @@ export class FloralView{
             // img.alt = target.id;
             // img.title = target.id;
 
-            Object.assign(img,{src: `../style/img/florais/${target.classList}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
+            Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
 
             document.querySelector('div').appendChild(img);
         }
