@@ -111,4 +111,10 @@ export class FloralView{
             document.querySelector('div').appendChild(img);
         }
 
+        realizarEvento(idAlvo, evento, funcao){
+            document.getElementById(idAlvo).addEventListener(evento, ()=>{
+                funcao();
+            });
+        }
+
     }

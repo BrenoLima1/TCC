@@ -9,4 +9,3 @@ class FloralController{
 }
 
 const floralController = new FloralController();
-floralController.FloralView
