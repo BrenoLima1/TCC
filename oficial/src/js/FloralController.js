@@ -4,16 +4,10 @@ import { FloralView } from "./FloralView.js";
 class FloralController{
     constructor(){
         this.floral = new Floral();
-        this.FloralView = new FloralView();
+        this.floralView = new FloralView();
     }
 }
 
 const floralController = new FloralController();
-const floralView = new FloralView();
 
-for (const b of document.querySelectorAll('li button')) {
-    b.addEventListener('click', (event)=>{
-        alert(event.target.parentElement.id);
-    });
-
-}
+floralController.floralView.realizarEventoParaTodos('li button','click');
