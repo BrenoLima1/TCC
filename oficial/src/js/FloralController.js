@@ -9,3 +9,11 @@ class FloralController{
 }
 
 const floralController = new FloralController();
+const floralView = new FloralView();
+
+for (const b of document.querySelectorAll('li button')) {
+    b.addEventListener('click', (event)=>{
+        alert(event.target.parentElement.id);
+    });
+
+}
