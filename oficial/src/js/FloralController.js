@@ -9,5 +9,6 @@ class FloralController{
 }
 
 const floralController = new FloralController();
+const floralView = new FloralView();
 
-floralController.floralView.realizarEventoParaTodos('li button','click');
+floralController.floralView.realizarEventosParaTodos('li button','click');

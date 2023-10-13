@@ -112,9 +112,12 @@ export class FloralView{
         }
 
         // realizarEventoParaTodosBotoes(tag, evento, funcao){
-        realizarEventoParaTodos(tag, evento){
-            for (const b of document.querySelectorAll(tag)) {
-                b.addEventListener(evento, (event)=>{
+        realizarEventosParaTodos(tag, evento){
+            for (const t of document.querySelectorAll(tag)) {
+                t.addEventListener(evento, (event)=>{
+                    this.removerBotoesNaoSelecionados(t);
+                   const botaoVoltar = this.criarBotaoVoltar();
+                   event.target.parentElement.parentElement.append(this.criarBotaoVoltar())
                     alert(event.target.parentElement.id);
                     // funcao();
                 });
