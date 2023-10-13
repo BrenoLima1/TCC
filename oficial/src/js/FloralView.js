@@ -113,6 +113,9 @@ export class FloralView{
 
         // realizarEventoParaTodosBotoes(tag, evento, funcao){
         realizarEventosParaTodos(tag, evento){
+            console.log(this.perguntas.children);
+            //this.perguntas.remove(); //Remover perguntas da lista
+            // document.querySelector('.mdl-cell--12-col').appendChild(this.perguntas); //Incorporar perguntas à lista
             for (const t of document.querySelectorAll(tag)) {
                 t.addEventListener(evento, (event)=>{
                     this.removerBotoesNaoSelecionados(t);
