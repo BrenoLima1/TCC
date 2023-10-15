@@ -40,13 +40,16 @@ export class FloralView{
         criarBotaoVoltar() {
             const botaoVoltar = document.createElement('button');
 
-            Object.assign(botaoVoltar, {innerText: 'Voltar', id: 'voltar'});
+            Object.assign(botaoVoltar, {innerText: 'Voltar', id: 'voltar', classList :"mdl-button mdl-js-button mdl-button--accent"});
 
             return botaoVoltar;
         }
 
         removerdiv(){
-            document.getElementById('resultado').remove();
+            const resultado = document.getElementById('resultado');
+            if (resultado ) {
+                resultado.remove();
+                }
         }
 
         exibirPerguntasAoCLicarEmVoltar(){
