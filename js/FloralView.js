@@ -13,14 +13,17 @@ export class FloralView{
 
             Object.assign(button, {innerText: text, id: idBotao, class: categoria});
 
+            button.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised');
+
             return button;
         }
 
         criarListaDeElementos(elements) {
-            const list = document.createElement('ol');
+            const list = document.createElement('ul');
 
             elements.forEach(element => {
                 const listItem = document.createElement('li');
+                listItem.className = 'mdl-list__item';
 
                 listItem.appendChild(element);
                 list.appendChild(listItem);
@@ -54,7 +57,7 @@ export class FloralView{
 
         exibirPerguntasAoCLicarEmVoltar(){
             document.getElementById('voltar').addEventListener('click', (event)=>{
-                document.querySelector('ol').remove();
+                document.querySelector('ul').remove();
                 this.body.appendChild(this.perguntas);
                 this.headerPergunta.innerText = this.text;
 

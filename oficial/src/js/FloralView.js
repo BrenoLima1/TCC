@@ -17,7 +17,7 @@ export class FloralView{
         }
 
         criarListaDeElementos(elements) {
-            const list = document.createElement('ol');
+            const list = document.createElement('ul');
 
             elements.forEach(element => {
                 const listItem = document.createElement('li');
@@ -51,7 +51,7 @@ export class FloralView{
 
         exibirPerguntasAoCLicarEmVoltar(){
             document.getElementById('voltar').addEventListener('click', (event)=>{
-                document.querySelector('ol').remove();
+                document.querySelector('ul').remove();
                 this.body.appendChild(this.perguntas);
                 this.headerPergunta.innerText = this.text;
 

@@ -35,7 +35,7 @@ class Controller {
     }
 
     exibirFloral(){
-        for (const button of document.querySelector('ol').childNodes) {
+        for (const button of document.querySelector('ul').childNodes) {
             button.firstChild.addEventListener('click', (event)=>{
                 this.view.criarDivComTexto(event.target);
                 this.view.mudarCorBotaoSelecionado(event.target);

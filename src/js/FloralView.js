@@ -13,7 +13,7 @@ export class FloralView{
     }
 
     criarListaDeElementos(elements) {
-        const list = document.createElement('ol');
+        const list = document.createElement('ul');
 
         elements.forEach(element => {
             const listItem = document.createElement('li');
