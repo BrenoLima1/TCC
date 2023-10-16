@@ -13,7 +13,7 @@ export class FloralView{
 
             Object.assign(button, {innerText: text, id: idBotao, class: categoria});
 
-            button.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised');
+            button.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised', 'simple');
 
             return button;
         }
@@ -72,8 +72,11 @@ export class FloralView{
 
         criarDivComTexto(button){
             const divResultado = document.createElement('div');
+            const span = document.createElement('span');
 
-            Object.assign(divResultado, {innerText: this.textoInicioResultado + button.id, id: 'resultado'});
+            Object.assign(divResultado, {innerText: this.textoInicioResultado, id: 'resultado'});
+            span.innerText = button.id + '\n';
+            divResultado.appendChild(span);
 
             this.body.insertBefore(divResultado,document.getElementById('voltar'));
             // this.body.append(divResultado);
@@ -114,7 +117,7 @@ export class FloralView{
 
             Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
 
-            document.querySelector('div').appendChild(img);
+            document.getElementById('resultado').appendChild(img);
         }
 
     }
