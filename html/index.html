@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="../js/FloralController.js" defer></script>
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/mdl/material.min.css">
     <script src="../style/mdl/material.min.js" type="module" defer></script>
-    <title>teste do teste de florais kkkkk</title>
+    <title>Teste de Florais</title>
 </head>
 <style>
   * {box-sizing: border-box;}
 
+#medo:hover{
+  color: white;
+  background-color: black;
+}
+
+#incerteza:hover{
+  background-color: #800080;
+  color: black;
+}
+
+#dPresente:hover{
+  background-color: white;
+  color: gray;
+}
 
 body {
   margin: 0;
@@ -25,9 +40,14 @@ ul,li {
     overflow: hidden;
 }
 
+h1:hover{
+  color: #a4baf7;
+  cursor: context-menu;
+}
+
 .header {
   overflow: hidden;
-  background-color: #d2f5b5;
+  background-color: #a4baf7;
   padding: 20px 10px;
 }
 
@@ -48,8 +68,8 @@ ul,li {
 }
 
 .header a:hover {
-  background-color: #dddddd;
-  color: black;
+  color: #b9ffb9;
+  /* color: black; */
 }
 
 .header a.active {
@@ -70,6 +90,10 @@ ul,li {
 
   .header-right {
     float: none;
+  }
+
+  h1{
+    font-size: 30px;
   }
 }
 
@@ -104,7 +128,7 @@ ul,li {
     <li class="mdl-list__item"><button id="incerteza" class="mdl-button mdl-js-button mdl-button--raised">Incerteza</button></li>
     <li class="mdl-list__item"><button id="dPresente" class="mdl-button mdl-js-button mdl-button--raised">Desinteresse no presente</button></li>
     <li class="mdl-list__item"><button id="solidao" class="mdl-button mdl-js-button mdl-button--raised">Solidão</button></li>
-    <li class="mdl-list__item"><button id="sensivelAInfluenciasEIdeias" class="mdl-button mdl-js-button mdl-button--raised">Sensível a influências e ideias</button></li>
+    <li class="mdl-list__item"><button id="sensivelAInfluenciasEIdeias" class="mdl-button mdl-js-button mdl-button--raised">Sensibilidade a influências e ideias</button></li>
     <li class="mdl-list__item"><button id="desanimoOuDesespero" class="mdl-button mdl-js-button mdl-button--raised">Desânimo ou desespero</button></li>
     <li class="mdl-list__item"><button id="preocupacaoBemEstarAlheio" class="mdl-button mdl-js-button mdl-button--raised">Preocupação excessiva pelo bem estar dos outros</button></li>
 </ul>

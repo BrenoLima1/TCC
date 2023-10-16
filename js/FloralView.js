@@ -5,7 +5,7 @@ export class FloralView{
         this.body = document.querySelector('body');
         this.headerPergunta = document.querySelector('h1');
         this.text = this.headerPergunta.innerText;
-        this.textoInicioResultado = 'A essência floral mais indicada para esta situação é: \n';
+        this.textoInicioResultado = 'A essência floral mais indicada para esta situação é: \n\n';
     }
 
     criarBotaoComTextoIdECategoria(text, idBotao, categoria) {
@@ -110,10 +110,8 @@ export class FloralView{
 
         exibirFlor(target){
             const img = document.createElement('img');
+            document.querySelector('h1').innerText = ''
 
-            // img.src = `../style/img/florais/${target.class}/${target.id}.png`;
-            // img.alt = target.id;
-            // img.title = target.id;
 
             Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
 
