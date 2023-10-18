@@ -12,19 +12,54 @@
 <style>
   * {box-sizing: border-box;}
 
+  button{
+    height: fit-content;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
 #medo:hover{
   color: white;
   background-color: black;
+  font-weight: 700;
+  font-size: medium;
 }
 
 #incerteza:hover{
-  background-color: #800080;
-  color: black;
+  background-color: rgb(248, 248, 141);
+  color: rgb(66, 66, 66);
+  font-weight: 700;
+  font-size: medium;
 }
 
 #dPresente:hover{
   background-color: white;
   color: gray;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#sensivelAInfluenciasEIdeias:hover{
+  background-color: pink;
+  color: rgb(10, 186, 218);
+  font-weight: 700;
+  font-size: medium;
+}
+
+#desanimoOuDesespero:hover{
+  background-color: black;
+  color: #EE82EE;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#preocupacaoBemEstarAlheio:hover{
+  background-color: grey;
+  color: orangered;
+  font-weight: 700;
+  font-size: medium;
 }
 
 body {
@@ -104,17 +139,14 @@ h1:hover{
 #voltar{
   margin-bottom: 6px;
 }
-        .demo-list-item {
-          /* width: 300px; */
-        }
 
-        .simple{
-          height: 65px;
-        }
+ .simple{
+  height: fit-content;
+}
 </style>
 <body>
   <div class="header">
-    <a href="#default" class="logo">Teste de Florais</a>
+    <a href="" class="logo">Teste de Florais</a>
     <div class="header-right">
       <a href="#home">O que são florais</a>
       <a href="#about">Instituto Bach</a>
@@ -133,6 +165,16 @@ h1:hover{
     <li class="mdl-list__item"><button id="preocupacaoBemEstarAlheio" class="mdl-button mdl-js-button mdl-button--raised">Preocupação excessiva pelo bem estar dos outros</button></li>
 </ul>
 </div>
+<!-- Square card -->
+<style>
+  .demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+  }
+  .mdl-card__title {
+    color: #a3ff97;
+  }
+  </style>
 
 </body>
 </html>

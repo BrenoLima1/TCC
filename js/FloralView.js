@@ -109,13 +109,56 @@ export class FloralView{
         }
 
         exibirFlor(target){
-            const img = document.createElement('img');
             document.querySelector('h1').innerText = ''
+            // const img = document.createElement('img');
 
+            const divCard = document.createElement('div');
+            const divMdlCardTitle = document.createElement('div');
+            const h2NomeFloral = document.createElement('div');
+            const divTexto = document.createElement('div');
+            const divActions = document.createElement('div');
+            const a = document.createElement('a');
 
-            Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
+            divCard.classList.add('demo-card-square', 'mdl-card', 'mdl-shadow--2dp');
 
-            document.getElementById('resultado').appendChild(img);
+            divMdlCardTitle.classList.add('mdl-card__title', 'mdl-card--expand');
+            divMdlCardTitle.id = 'mdl-card__title';
+            divMdlCardTitle.style.background = `url('../style/img/florais/${target.class}/${target.id}.png') 15%  #46B6AC`;
+
+            h2NomeFloral.classList.add('mdl-card__title-text');
+            h2NomeFloral.innerText = target.id;
+
+            divTexto.classList.add('mdl-card__supporting-text');
+            divTexto.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nAenan convallis.';
+
+            divActions.classList.add('mdl-card__actions','mdl-card--border');
+
+            a.classList.add('mdl-button', 'mdl-button--colored', 'mdl-js-button', 'mdl-js-ripple-effect');
+            a.innerText = 'Detalhes';
+
+            // Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
+
+            divActions.appendChild(a);
+            divMdlCardTitle.appendChild(h2NomeFloral);
+            divCard.append(divMdlCardTitle,divTexto,divActions);
+            document.getElementById('resultado').appendChild(divCard);
         }
+
+
+
+//         <div class="demo-card-square mdl-card mdl-shadow--2dp"> //append tudu
+//     <div class="mdl-card__title mdl-card--expand">
+//       <h2 class="mdl-card__title-text">Update</h2>
+//     </div>
+//     <div class="mdl-card__supporting-text">
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+//       Aenan convallis.
+//     </div>
+//     <div class="mdl-card__actions mdl-card--border">
+//       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+//         View Updates
+//       </a>
+//     </div>
+//   </div>
 
     }
