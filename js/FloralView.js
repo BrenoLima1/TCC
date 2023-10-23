@@ -13,14 +13,14 @@ export class FloralView{
 
             Object.assign(button, {innerText: text, id: idBotao, class: categoria});
 
-            button.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised', 'simple');
+            button.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised', 'simple', categoria);
 
             return button;
         }
 
         criarListaDeElementos(elements) {
             const list = document.createElement('ul');
-
+            list.id = 'opcoes';
             elements.forEach(element => {
                 const listItem = document.createElement('li');
                 listItem.className = 'mdl-list__item';
@@ -72,11 +72,11 @@ export class FloralView{
 
         criarDivComTexto(button){
             const divResultado = document.createElement('div');
-            const span = document.createElement('span');
+            // const span = document.createElement('span');
 
             Object.assign(divResultado, {innerText: this.textoInicioResultado, id: 'resultado'});
-            span.innerText = button.id + '\n';
-            divResultado.appendChild(span);
+            // span.innerText = button.id + '\n';
+            // divResultado.appendChild(span);
 
             this.body.insertBefore(divResultado,document.getElementById('voltar'));
             // this.body.append(divResultado);

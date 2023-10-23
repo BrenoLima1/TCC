@@ -1,9 +1,8 @@
 #divForm, .demo-card-square {
     text-align: center;
     /* max-width: 350px; */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     display: table;
+    align-content: center;
     position: absolute;
     left: 0;
     right: 0;
@@ -11,5 +10,61 @@
   }
 
   .header:hover{
-    background-color: #bbf7a4;
+  background-color: #a4baf7;
+  }
+
+  li{
+    display: flex;
+  justify-content: center;
+  }
+
+  .medo:hover{
+    color: white;
+    background-color: black;
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  .incerteza:hover{
+    background-color: rgb(248, 248, 141);
+    color: rgb(66, 66, 66);
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  .desinteresseNoPresente:hover{
+    background-color: white;
+    color: gray;
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  .sensivelAInfluenciasEIdeias:hover{
+    background-color: pink;
+    color: rgb(10, 186, 218);
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  .desanimoOuDesespero:hover{
+    background-color: black;
+    color: #EE82EE;
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  .preocupacaoBemEstarAlheio:hover{
+    background-color: grey;
+    color: orangered;
+    font-weight: 700;
+    font-size: medium;
+  }
+
+  #voltar:hover{
+    background-color: rgba(158,158,158, 0.20);
+    border-radius: 50%;
+  }
+
+  button{
+    border-radius: 25%;
   }
