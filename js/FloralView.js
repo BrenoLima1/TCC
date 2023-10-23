@@ -1,7 +1,7 @@
 export class FloralView{
 
     constructor() {
-        this.perguntas = document.getElementById('sentimentos');
+        this.perguntas = document.getElementById('sentimentos').parentElement;
         this.body = document.querySelector('body');
         this.headerPergunta = document.querySelector('h1');
         this.text = this.headerPergunta.innerText;
@@ -90,7 +90,7 @@ export class FloralView{
         }
 
         mudarCorBotaoSelecionado(botaoSelecionado){
-            botaoSelecionado.style.backgroundColor = '#979700';
+            botaoSelecionado.style.backgroundColor = '#67674c';
         }
 
         removerBotoesNaoSelecionados(botaoSelecionado){
@@ -109,7 +109,7 @@ export class FloralView{
         }
 
         exibirFlor(target){
-            document.querySelector('h1').innerText = ''
+            document.querySelector('h1').innerText = '';
             // const img = document.createElement('img');
 
             const divCard = document.createElement('div');
