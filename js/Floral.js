@@ -2,8 +2,8 @@ export class Floral{
     constructor() {
         this.data = {
             perguntas: [
-                { categoria: 'medo', text: 'Simplesmente entro em estado de pânico. Não consigo me mover quando tenho certos pensamentos.', nome: 'Rock Rose' },
-                { categoria: 'medo', text: 'Temo coisas ruins existentes no mundo real, como dor, doenças, acidentes, pobreza, escuro, entre outros acontecerem comigo.', nome: 'Mimulus' },
+                { categoria: 'medo', text: 'Simplesmente entro em estado de pânico. Não consigo me mover quando tenho certos pensamentos.', nome: 'Rock Rose', descricao:  'É o remédio contra o terror e, como tal, um importante ingrediente da fórmula de emergência.'},
+                { categoria: 'medo', text: 'Temo coisas ruins existentes no mundo real, como dor, doenças, acidentes, pobreza, escuro, entre outros acontecerem comigo.', nome: 'Mimulus', descricao: 'Para os medos conhecidos, como quando você se sente assustado ou ansioso sobre algo que sabe nomear, que conhece.' },
                 { categoria: 'medo', text: 'Temo seguir pensamentos e impulsos e fazer coisas que sei que são erradas.', nome: 'Cherry Plum' },
                 { categoria: 'medo', text: 'Sinto de que algo terrível vai acontecer, mas não sei exatamente o que.', nome: 'Aspen' },
                 { categoria: 'medo', text: 'Temo que aqueles que amo sofram. Antecipo que algo desafortunado lhes aconteça.', nome: 'Red Chestnut' },

@@ -124,6 +124,7 @@ export class FloralView{
             divMdlCardTitle.classList.add('mdl-card__title', 'mdl-card--expand');
             divMdlCardTitle.id = 'mdl-card__title';
             divMdlCardTitle.style.background = `url('../style/img/florais/${target.class}/${target.id}.png') 15%  #46B6AC`;
+            divMdlCardTitle.style.backgroundSize = 'cover';
 
             h2NomeFloral.classList.add('mdl-card__title-text');
             h2NomeFloral.innerText = target.id;
@@ -133,8 +134,9 @@ export class FloralView{
 
             divActions.classList.add('mdl-card__actions','mdl-card--border');
 
+            Object.assign(a, {innerText: 'Detalhes', id: 'detalhes', href :"https://www.bachcentre.com/pt/os-florais/os-38-remedios/" + target.id, target: '_blank'});
             a.classList.add('mdl-button', 'mdl-button--colored', 'mdl-js-button', 'mdl-js-ripple-effect');
-            a.innerText = 'Detalhes';
+
 
             // Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
 
