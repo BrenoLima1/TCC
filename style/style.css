@@ -1,3 +1,200 @@
+.footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+
+
+
+
+* {box-sizing: border-box;}
+
+button{
+  height: fit-content;
+}
+
+h1{
+  font-size: 50px;
+}
+
+#medo:hover{
+color: white;
+background-color: black;
+font-weight: 700;
+font-size: medium;
+}
+
+#incerteza:hover{
+background-color: rgb(248, 248, 141);
+color: rgb(66, 66, 66);
+font-weight: 700;
+font-size: medium;
+}
+
+#dPresente:hover{
+background-color: white;
+color: gray;
+font-weight: 700;
+font-size: medium;
+}
+
+#sensivelAInfluenciasEIdeias:hover{
+background-color: pink;
+color: rgb(10, 186, 218);
+font-weight: 700;
+font-size: medium;
+}
+
+#desanimoOuDesespero:hover{
+background-color: black;
+color: #EE82EE;
+font-weight: 700;
+font-size: medium;
+}
+
+#preocupacaoBemEstarAlheio:hover{
+background-color: grey;
+color: orangered;
+font-weight: 700;
+font-size: medium;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+/* ul,li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+
+h1:hover{
+color: grey;
+cursor: context-menu;
+}
+
+.header {
+overflow: hidden;
+background-color: #bbf7a4;
+padding: 20px 10px;
+}
+
+.header a {
+float: left;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
+}
+
+.header a.logo {
+font-size: 25px;
+font-weight: bold;
+}
+
+.header a:hover {
+color: #bbf7a4;
+font-weight: 800;
+/* color: black; */
+}
+
+.header a.active {
+background-color: dodgerblue;
+color: white;
+}
+
+.header-right {
+float: right;
+}
+
+@media screen and (max-width: 1180px) {
+.header a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.header-right {
+  float: none;
+}
+
+h1{
+  font-size: 30px;
+}
+
+#medo{
+color: white;
+background-color: black;
+font-weight: 700;
+font-size: medium;
+}
+
+#incerteza{
+background-color: rgb(248, 248, 141);
+color: rgb(66, 66, 66);
+font-weight: 700;
+font-size: medium;
+}
+
+#dPresente{
+background-color: white;
+color: gray;
+font-weight: 700;
+font-size: medium;
+}
+
+#sensivelAInfluenciasEIdeias{
+background-color: pink;
+color: rgb(10, 186, 218);
+font-weight: 700;
+font-size: medium;
+}
+
+#desanimoOuDesespero{
+background-color: black;
+color: #EE82EE;
+font-weight: 700;
+font-size: medium;
+}
+
+#preocupacaoBemEstarAlheio{
+background-color: grey;
+color: orangered;
+font-weight: 700;
+font-size: medium;
+}
+}
+
+#resultado{
+text-align: center;
+}
+
+#voltar{
+margin-bottom: 6px;
+margin-top: 6px
+}
+
+.simple{
+height: fit-content;
+}
+
+
+
+
+
+
 #divForm, .demo-card-square {
     text-align: center;
     /* max-width: 350px; */
@@ -68,3 +265,186 @@
   button{
     border-radius: 25%;
   }
+
+   * {box-sizing: border-box;}
+
+  button{
+    height: fit-content;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+#medo:hover{
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#incerteza:hover{
+  background-color: rgb(248, 248, 141);
+  color: rgb(66, 66, 66);
+  font-weight: 700;
+  font-size: medium;
+}
+
+#dPresente:hover{
+  background-color: white;
+  color: gray;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#sensivelAInfluenciasEIdeias:hover{
+  background-color: pink;
+  color: rgb(10, 186, 218);
+  font-weight: 700;
+  font-size: medium;
+}
+
+#desanimoOuDesespero:hover{
+  background-color: black;
+  color: #EE82EE;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#preocupacaoBemEstarAlheio:hover{
+  background-color: grey;
+  color: orangered;
+  font-weight: 700;
+  font-size: medium;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* ul,li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} */
+
+h1:hover{
+  color: grey;
+  cursor: context-menu;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #bbf7a4;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: #bbf7a4;
+  font-weight: 800;
+  /* color: black; */
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 1200px) {
+
+  #opcoes{
+    margin-left: -40px;
+  }
+
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  #medo{
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#incerteza{
+  background-color: rgb(248, 248, 141);
+  color: rgb(66, 66, 66);
+  font-weight: 700;
+  font-size: medium;
+}
+
+#dPresente{
+  background-color: white;
+  color: gray;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#sensivelAInfluenciasEIdeias{
+  background-color: pink;
+  color: rgb(10, 186, 218);
+  font-weight: 700;
+  font-size: medium;
+}
+
+#desanimoOuDesespero{
+  background-color: black;
+  color: #EE82EE;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#preocupacaoBemEstarAlheio{
+  background-color: grey;
+  color: orangered;
+  font-weight: 700;
+  font-size: medium;
+}
+}
+
+#resultado{
+  text-align: center;
+}
+
+#voltar{
+  margin-bottom: 6px;
+  margin-top: 6px
+}
+
+ .simple{
+  height: fit-content;
+}
