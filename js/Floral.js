@@ -15,13 +15,13 @@ export class Floral{
                 { categoria: 'incerteza', text: 'Não possuo força física e/ou mental o suficiente para carregar o fardo da vida. Alguma parte de minha mente e/ou meu corpo deve ser fortalecida antes que eu possa facilmente completar meu trabalho.', nome: 'Hornbeam', descricao: 'Para combater o cansaço e a exaustão quando ocorrem antes mesmo do esforço ser feito.' },
                 { categoria: 'incerteza', text: 'Apesar de desejar alcançar um alto nível de sucesso, reconhecimento ou fama, possuo dificuldade em determinar qual ocupação seguir.', nome: 'Wild Oat', descricao: 'Para aqueles que sentem que querem fazer algo com sua vida que realmente valha a pena, porém não sabem que direção tomar. Eles andam à deriva, de uma coisa para a outra, sem encontrar seu caminho verdadeiro. Como resultado, se frustam e se desanimam.' },
 
-                { categoria: 'desinteresseNoPresente', text: 'Não tenho interesse na vida. Vivo mais em esperanças de tempos mais felizes, nos quais meus ideais poderão se tornar realidade.', nome: 'Clematis', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'Não espero felicidade maior da que tive no passado.', nome: 'Honeysuckle', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'Apenas deslizo pela vida, não me esforço para melhorar as coisas. Apenas aceito a vida como ela é.', nome: 'Wild Rose', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'A vida diária é um trabalho duro. Já sofri tanto que estou esgotado/a, sentindo que não possuo força para fazer nenhum esforço.', nome: 'Olive', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'Não consigo impedir que pensamentos, ideias e argumentos indesejados entrem em minha cabeça. Após um tempo tendo descartado estes pensamentos, eles simplesmente retornam.', nome: 'White Chestnut', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'Sou suscetível a tempos de melancolia ou desespero. É muito difícil mostrar-me feliz ou alegre.', nome: 'Mustard', descricao: '' },
-                { categoria: 'desinteresseNoPresente', text: 'Levo muito tempo para aprender as lições da vida diária, pois não tiro proveito da observação e experiência.', nome: 'Chestnut Bud', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Não tenho interesse na vida. Vivo mais em esperanças de tempos mais felizes, nos quais meus ideais poderão se tornar realidade.', nome: 'Clematis', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Não espero felicidade maior da que tive no passado.', nome: 'Honeysuckle', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Apenas deslizo pela vida, não me esforço para melhorar as coisas. Apenas aceito a vida como ela é.', nome: 'Wild Rose', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'A vida diária é um trabalho duro. Já sofri tanto que estou esgotado/a, sentindo que não possuo força para fazer nenhum esforço.', nome: 'Olive', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Não consigo impedir que pensamentos, ideias e argumentos indesejados entrem em minha cabeça. Após um tempo tendo descartado estes pensamentos, eles simplesmente retornam.', nome: 'White Chestnut', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Sou suscetível a tempos de melancolia ou desespero. É muito difícil mostrar-me feliz ou alegre.', nome: 'Mustard', descricao: '', descricao: '' },
+                { categoria: 'desinteresseNoPresente', text: 'Levo muito tempo para aprender as lições da vida diária, pois não tiro proveito da observação e experiência.', nome: 'Chestnut Bud', descricao: '', descricao: '' },
 
                 { categoria: 'solidao', text: 'Na saúde ou na doença gosto de ficar sozinho/a. Sou uma pessoa muito quieta.', nome: 'Water Violet', descricao: '' },
                 { categoria: 'solidao', text: 'Eu luto com a dificuldade de ser paciente com pessoas lentas e anseio por fazer as coisas no meu próprio ritmo.', nome: 'Impatiens', descricao: '' },
@@ -53,4 +53,10 @@ export class Floral{
     obterCategoria(categoria) {
         return this.data.perguntas.filter(q => q.categoria === categoria);
     }
+
+    obterDescricao(nome) {
+        const question = this.data.perguntas.find(q => q.nome === nome);
+        return question ? question.descricao : '';
+    }
+
 }
