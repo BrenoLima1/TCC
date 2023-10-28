@@ -80,7 +80,7 @@ export class FloralView{
             tagPai.appendChild(fragment);
         }
 
-        mudarCorBotaoSelecionado(botaoSelecionado){
+        destacarOpcaoSelecionada(botaoSelecionado){
             botaoSelecionado.style.backgroundColor = '#979700';
         }
 

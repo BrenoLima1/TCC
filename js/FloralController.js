@@ -38,7 +38,7 @@ class Controller {
         for (const button of document.querySelector('ul').childNodes) {
             button.firstChild.addEventListener('click', (event)=>{
                 this.view.criarDivComTexto(event.target);
-                this.view.mudarCorBotaoSelecionado(event.target);
+                this.view.destacarOpcaoSelecionada(event.target);
                 this.view.removerBotoesNaoSelecionados(event.target);
                 this.view.criarBotaoVoltar();
                 this.view.exibirFlor(event.target);

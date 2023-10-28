@@ -89,8 +89,12 @@ export class FloralView{
             tagPai.appendChild(fragment);
         }
 
-        mudarCorBotaoSelecionado(botaoSelecionado){
+        destacarOpcaoSelecionada(botaoSelecionado){
             botaoSelecionado.style.backgroundColor = '#67674c';
+            botaoSelecionado.style.height = 'fit-content';
+            botaoSelecionado.style.width = '50%';
+            botaoSelecionado.style.borderRadius = '8%';
+            botaoSelecionado.style.borderStyle = 'solid';
         }
 
         removerBotoesNaoSelecionados(botaoSelecionado){
