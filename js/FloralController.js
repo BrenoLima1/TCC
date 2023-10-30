@@ -22,6 +22,10 @@ class Controller {
         document.getElementById('preocupacaoBemEstarAlheio').addEventListener('click', () => this.lidarComCategoriaAoClicar('preocupacaoBemEstarAlheio'));
     }
 
+    bindEventsDescricao(){
+        document.getElementById('Rock Rose').addEventListener('click', ()=> this.lid)
+    }
+
     lidarComCategoriaAoClicar(categoria) {
         const questions = this.model.obterCategoria(categoria);
         const buttons = questions.map(q => this.view.criarBotaoComTextoIdECategoria(q.text,q.nome,q.categoria));
@@ -42,6 +46,8 @@ class Controller {
                 this.view.removerBotoesNaoSelecionados(event.target);
                 this.view.criarBotaoVoltar();
                 this.view.exibirFlor(event.target);
+                const descricao = this.model.obterDescricao(event.target.id);
+                document.getElementsByClassName('mdl-card__supporting-text')[0].innerText = descricao;
             });
         }
     }
