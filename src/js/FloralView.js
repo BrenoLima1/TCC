@@ -30,7 +30,7 @@ export class FloralView{
     }
 
     removerPerguntas() {
-        this.perguntas.remove();
+        this.opcoes.remove();
     }
 
     criarBotaoVoltar() {

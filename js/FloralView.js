@@ -1,7 +1,7 @@
 export class FloralView{
 
     constructor() {
-        this.perguntas = document.getElementById('sentimentos').parentElement;
+        this.opcoes = document.getElementById('sentimentos').parentElement;
         this.body = document.querySelector('body');
         this.headerPergunta = document.querySelector('h1');
         this.text = this.headerPergunta.innerText;
@@ -37,7 +37,7 @@ export class FloralView{
         }
 
         removerPerguntas() {
-            this.perguntas.remove();
+            this.opcoes.remove();
         }
 
         criarBotaoVoltar() {
@@ -58,7 +58,7 @@ export class FloralView{
         exibirPerguntasAoCLicarEmVoltar(){
             document.getElementById('voltar').addEventListener('click', (event)=>{
                 document.querySelector('ul').remove();
-                this.body.appendChild(this.perguntas);
+                this.body.appendChild(this.opcoes);
                 this.headerPergunta.innerText = this.text;
 
                 event.target.remove();
@@ -92,7 +92,7 @@ export class FloralView{
         destacarOpcaoSelecionada(botaoSelecionado){
             botaoSelecionado.style.backgroundColor = '#67674c';
             botaoSelecionado.style.height = 'fit-content';
-            botaoSelecionado.style.width = '50%';
+            // botaoSelecionado.style.width = '50%';
             botaoSelecionado.style.borderRadius = '8%';
             botaoSelecionado.style.borderStyle = 'solid';
         }

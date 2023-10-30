@@ -1,7 +1,7 @@
 export class FloralView{
 
     constructor() {
-        this.perguntas = document.getElementById('sentimentos');
+        this.opcoes = document.getElementById('sentimentos');
         this.body = document.querySelector('body');
         this.headerPergunta = document.querySelector('h1');
         this.text = this.headerPergunta.innerText;
@@ -34,7 +34,7 @@ export class FloralView{
         }
 
         removerPerguntas() {
-            this.perguntas.remove();
+            this.opcoes.remove();
         }
 
         criarBotaoVoltar() {
@@ -52,7 +52,7 @@ export class FloralView{
         exibirPerguntasAoCLicarEmVoltar(){
             document.getElementById('voltar').addEventListener('click', (event)=>{
                 document.querySelector('ul').remove();
-                this.body.appendChild(this.perguntas);
+                this.body.appendChild(this.opcoes);
                 this.headerPergunta.innerText = this.text;
 
                 event.target.remove();
@@ -113,9 +113,9 @@ export class FloralView{
 
         // realizarEventoParaTodosBotoes(tag, evento, funcao){
         realizarEventosParaTodos(tag, evento){
-            // console.log(this.perguntas.children);
-            //this.perguntas.remove(); //Remover perguntas da lista
-            // document.querySelector('.mdl-cell--12-col').appendChild(this.perguntas); //Incorporar perguntas à lista
+            // console.log(this.opcoes.children);
+            //this.opcoes.remove(); //Remover perguntas da lista
+            // document.querySelector('.mdl-cell--12-col').appendChild(this.opcoes); //Incorporar perguntas à lista
             for (const t of document.querySelectorAll(tag)) {
                 t.addEventListener(evento, (event)=>{
                     this.removerBotoesNaoSelecionados(t);

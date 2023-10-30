@@ -51,6 +51,6 @@ export class Floral{
     }
 
     obterCategoria(categoria) {
-        return this.data.perguntas.filter(q => q.categoria === categoria);
+        return this.data.opcoes.filter(q => q.categoria === categoria);
     }
 }
