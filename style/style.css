@@ -3,22 +3,34 @@ button{
     height: fit-content;
 }
 
-#sentimentos{
-  margin-top: 0px;
-}
 
 .demo-card-square.mdl-card {
-  /* width: 320px;
-  height: 320px; */
+  width: 320px;
+  height: 320px;
 }
 .mdl-card__title {
   color: black;
-    height: 200px;
 }
 
 .mdl-card__title-text{
   background-color: rgba(255, 255, 255, 0.541);
 }
+
+
+
+.footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+
+
+
 
 * {box-sizing: border-box;}
 
@@ -65,7 +77,7 @@ font-size: medium;
 
 #preocupacaoBemEstarAlheio:hover{
 background-color: grey;
-color: orange;
+color: orangered;
 font-weight: 700;
 font-size: medium;
 }
@@ -126,14 +138,6 @@ float: right;
 }
 
 @media screen and (max-width: 1180px) {
-  h1{
-    font-size: 30px;
-  }
-
-#resultado{
-  margin-bottom: 95%;
-
-}
 .header a {
   float: none;
   display: block;
@@ -146,6 +150,10 @@ float: right;
 
 button{
   height: fit-content;
+}
+
+h1{
+  font-size: 30px;
 }
 
 #medo{
@@ -185,7 +193,7 @@ font-size: medium;
 
 #preocupacaoBemEstarAlheio{
 background-color: grey;
-color: orange;
+color: orangered;
 font-weight: 700;
 font-size: medium;
 }
@@ -195,7 +203,6 @@ font-size: medium;
 text-align: center;
 font-family: inherit;
 font-size: large;
-margin-bottom: 30%;
 }
 
 #voltar{
@@ -268,7 +275,7 @@ height: fit-content;
 
   .preocupacaoBemEstarAlheio:hover{
     background-color: grey;
-    color: orange;
+    color: orangered;
     font-weight: 700;
     font-size: medium;
   }
@@ -321,7 +328,7 @@ height: fit-content;
 
 #preocupacaoBemEstarAlheio:hover{
   background-color: grey;
-  color: orange;
+  color: orangered;
   font-weight: 700;
   font-size: medium;
 }
@@ -438,11 +445,16 @@ h1:hover{
 
 #preocupacaoBemEstarAlheio{
   background-color: grey;
-  color: orange;
+  color: orangered;
   font-weight: 700;
   font-size: medium;
 }
 }
+
+#resultado{
+  text-align: center;
+}
+
 
 
  .simple{

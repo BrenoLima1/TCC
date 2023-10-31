@@ -19,7 +19,6 @@ export class FloralView{
         }
 
         criarListaDeElementos(elements) {
-            const fragment = this.criarFragmento();
             const list = document.createElement('ul');
             list.id = 'opcoes';
             elements.forEach(element => {
@@ -28,10 +27,9 @@ export class FloralView{
 
                 listItem.appendChild(element);
                 list.appendChild(listItem);
-                fragment.appendChild(list);
             });
 
-            return fragment;
+            return list;
         }
 
         incorporarListaEBotao(list){
@@ -43,21 +41,18 @@ export class FloralView{
         }
 
         criarBotaoVoltar() {
-            const fragment = this.criarFragmento();
             const botaoVoltar = document.createElement('button');
 
             Object.assign(botaoVoltar, {innerText: 'Voltar', id: 'voltar', classList :"mdl-button mdl-js-button mdl-button--accent"});
 
-            fragment.appendChild(botaoVoltar);
-
-            return fragment;
+            return botaoVoltar;
         }
 
         removerdiv(){
             const resultado = document.getElementById('resultado');
             if (resultado ) {
                 resultado.remove();
-            }
+                }
         }
 
         exibirPerguntasAoCLicarEmVoltar(){
@@ -77,17 +72,27 @@ export class FloralView{
 
         criarDivComTexto(button){
             const divResultado = document.createElement('div');
-            const fragment = this.criarFragmento();
+            // const span = document.createElement('span');
 
             Object.assign(divResultado, {innerText: this.textoInicioResultado, id: 'resultado'});
-            fragment.appendChild(divResultado);
+            // span.innerText = button.id + '\n';
+            // divResultado.appendChild(span);
 
-            this.body.insertBefore(fragment,document.getElementById('voltar'));
+            this.body.insertBefore(divResultado,document.getElementById('voltar'));
+            // this.body.append(divResultado);
+        }
+
+        inserirFragmento(tagPai, tagFilha){
+            const fragment = document.createDocumentFragment();
+
+            fragment.appendChild(tagFilha);
+            tagPai.appendChild(fragment);
         }
 
         destacarOpcaoSelecionada(botaoSelecionado){
             botaoSelecionado.style.backgroundColor = '#67674c';
             botaoSelecionado.style.height = 'fit-content';
+            // botaoSelecionado.style.width = '50%';
             botaoSelecionado.style.borderRadius = '8%';
             botaoSelecionado.style.borderStyle = 'solid';
         }
@@ -109,8 +114,8 @@ export class FloralView{
 
         exibirFlor(target){
             document.querySelector('h1').innerText = '';
+            // const img = document.createElement('img');
 
-            const fragment = this.criarFragmento();
             const divCard = document.createElement('div');
             const divMdlCardTitle = document.createElement('div');
             const h2NomeFloral = document.createElement('div');
@@ -136,15 +141,13 @@ export class FloralView{
             Object.assign(a, {innerText: 'Detalhes', id: 'detalhes', href :"https://www.bachcentre.com/pt/os-florais/os-38-remedios/" + target.id, target: '_blank'});
             a.classList.add('mdl-button', 'mdl-button--colored', 'mdl-js-button', 'mdl-js-ripple-effect');
 
+
+            // Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
+
             divActions.appendChild(a);
             divMdlCardTitle.appendChild(h2NomeFloral);
             divCard.append(divMdlCardTitle,divTexto,divActions);
-            fragment.appendChild(divCard);
-            document.getElementById('resultado').appendChild(fragment);
-        }
-
-        criarFragmento(){
-            return document.createDocumentFragment();
+            document.getElementById('resultado').appendChild(divCard);
         }
 
     }
