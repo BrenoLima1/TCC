@@ -72,14 +72,10 @@ export class FloralView{
 
         criarDivComTexto(button){
             const divResultado = document.createElement('div');
-            // const span = document.createElement('span');
 
             Object.assign(divResultado, {innerText: this.textoInicioResultado, id: 'resultado'});
-            // span.innerText = button.id + '\n';
-            // divResultado.appendChild(span);
 
             this.body.insertBefore(divResultado,document.getElementById('voltar'));
-            // this.body.append(divResultado);
         }
 
         destacarOpcaoSelecionada(botaoSelecionado){

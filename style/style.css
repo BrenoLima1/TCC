@@ -1,8 +1,7 @@
 button{
   border-radius: 25%;
-    height: fit-content;
+    height: auto;
 }
-
 
 .demo-card-square.mdl-card {
   width: 320px;
@@ -16,6 +15,9 @@ button{
   background-color: rgba(255, 255, 255, 0.541);
 }
 
+.mdl-button{
+  height: auto !important;
+}
 
 
 .footer {
@@ -28,13 +30,7 @@ button{
   text-align: center;
 }
 
-
-
-
-
 * {box-sizing: border-box;}
-
-
 
 h1{
   font-size: 50px;
@@ -87,13 +83,6 @@ margin: 0;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
 }
-
-/* ul,li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-} */
 
 h1:hover{
 color: grey;
@@ -148,12 +137,9 @@ float: right;
   float: none;
 }
 
-button{
-  height: fit-content;
-}
-
 h1{
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 #medo{
@@ -207,17 +193,12 @@ margin-bottom: 12px;
 }
 
 #voltar{
-margin-bottom: 6px;
+margin-bottom: 12px;
 }
 
 .simple{
-height: fit-content;
+height: auto;
 }
-
-
-
-
-
 
 #divForm, .demo-card-square {
     text-align: center;
@@ -229,6 +210,7 @@ height: fit-content;
     right: 0;
     margin: auto;
   }
+
 
   .header:hover{
   background-color: #a4baf7;
@@ -340,13 +322,6 @@ body {
   text-align: center;
 }
 
-/* ul,li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-} */
-
 h1:hover{
   color: grey;
   cursor: context-menu;
@@ -452,7 +427,6 @@ h1:hover{
 }
 }
 
-
  .simple{
-  height: fit-content;
+  height: auto;
 }

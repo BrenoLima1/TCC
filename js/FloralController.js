@@ -22,10 +22,6 @@ class Controller {
         document.getElementById('preocupacaoBemEstarAlheio').addEventListener('click', () => this.lidarComCategoriaAoClicar('preocupacaoBemEstarAlheio'));
     }
 
-    bindEventsDescricao(){
-        document.getElementById('Rock Rose').addEventListener('click', ()=> this.lid)
-    }
-
     lidarComCategoriaAoClicar(categoria) {
         const questions = this.model.obterCategoria(categoria);
         const buttons = questions.map(q => this.view.criarBotaoComTextoIdECategoria(q.text,q.nome,q.categoria));
