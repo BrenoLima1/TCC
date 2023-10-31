@@ -82,17 +82,9 @@ export class FloralView{
             // this.body.append(divResultado);
         }
 
-        inserirFragmento(tagPai, tagFilha){
-            const fragment = document.createDocumentFragment();
-
-            fragment.appendChild(tagFilha);
-            tagPai.appendChild(fragment);
-        }
-
         destacarOpcaoSelecionada(botaoSelecionado){
             botaoSelecionado.style.backgroundColor = '#67674c';
             botaoSelecionado.style.height = 'fit-content';
-            // botaoSelecionado.style.width = '50%';
             botaoSelecionado.style.borderRadius = '8%';
             botaoSelecionado.style.borderStyle = 'solid';
         }

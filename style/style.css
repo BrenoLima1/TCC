@@ -203,6 +203,7 @@ font-size: medium;
 text-align: center;
 font-family: inherit;
 font-size: large;
+margin-bottom: 12px;
 }
 
 #voltar{
@@ -450,11 +451,6 @@ h1:hover{
   font-size: medium;
 }
 }
-
-#resultado{
-  text-align: center;
-}
-
 
 
  .simple{
