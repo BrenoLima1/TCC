@@ -70,7 +70,7 @@ export class FloralView{
             this.headerPergunta.innerText = pergunta;
         }
 
-        criarDivComTexto(button){
+        criarDivComTexto(){
             const divResultado = document.createElement('div');
 
             Object.assign(divResultado, {innerText: this.textoInicioResultado, id: 'resultado'});
