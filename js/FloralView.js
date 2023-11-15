@@ -33,7 +33,9 @@ export class FloralView{
         }
 
         incorporarListaEBotao(list){
-            this.body.append(list,this.criarBotaoVoltar());
+            const frag = document.createDocumentFragment();
+            frag.append(list,this.criarBotaoVoltar());
+            this.body.appendChild(frag);
         }
 
         removerPerguntas() {
@@ -56,9 +58,11 @@ export class FloralView{
         }
 
         exibirPerguntasAoCLicarEmVoltar(){
+            const frag = document.createDocumentFragment();
             document.getElementById('voltar').addEventListener('click', (event)=>{
                 document.querySelector('ul').remove();
-                this.body.appendChild(this.opcoes);
+                frag.appendChild(this.opcoes);
+                this.body.appendChild(frag);
                 this.headerPergunta.innerText = this.text;
 
                 event.target.remove();
@@ -93,7 +97,7 @@ export class FloralView{
                     li.remove();
                     botaoSelecionado.parentElement.style.listStyleType ='none';
                     botaoSelecionado.disabled = 'true';
-                    botaoSelecionado.style.color = 'black';
+                    botaoSelecionado.style.color = 'red';
                     botaoSelecionado.style.fontWeight = '550';
                     botaoSelecionado.style.fontSize = 'large';
                 }
@@ -102,8 +106,8 @@ export class FloralView{
 
         exibirFlor(target){
             document.querySelector('h1').innerText = '';
-            // const img = document.createElement('img');
 
+            const frag = document.createDocumentFragment();
             const divCard = document.createElement('div');
             const divMdlCardTitle = document.createElement('div');
             const h2NomeFloral = document.createElement('div');
@@ -135,7 +139,8 @@ export class FloralView{
             divActions.appendChild(a);
             divMdlCardTitle.appendChild(h2NomeFloral);
             divCard.append(divMdlCardTitle,divTexto,divActions);
-            document.getElementById('resultado').appendChild(divCard);
+            frag.appendChild(divCard);
+            document.getElementById('resultado').appendChild(frag);
         }
 
     }

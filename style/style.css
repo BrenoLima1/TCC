@@ -3,6 +3,16 @@ button{
     height: auto;
 }
 
+a .imgLogo{
+  height: 30px;
+  /* width: 50px; */
+  border-radius: 50%;
+}
+
+.imgLogo:hover{
+  height: 80px;
+}
+
 .demo-card-square.mdl-card {
   width: 320px;
   height: 400px;
@@ -17,17 +27,6 @@ button{
 
 .mdl-button{
   height: auto !important;
-}
-
-
-.footer {
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
 }
 
 * {box-sizing: border-box;}
@@ -362,6 +361,10 @@ h1:hover{
 
 .header-right {
   float: right;
+}
+
+#opcoes{
+  margin-left: -41px;
 }
 
 @media screen and (max-width: 1200px) {
