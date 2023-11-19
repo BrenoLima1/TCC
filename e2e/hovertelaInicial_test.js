@@ -10,7 +10,7 @@ Scenario('teste de tela inicial com hover',  ({ I }) => {
     I.see('SOLIDÃO');
     I.see('SENSIBILIDADE A INFLUÊNCIAS E IDEIAS');
     I.see('DESÂNIMO OU DESESPERO');
-    I.see('PREOCUPAÇÃO EXCESSIVA PELO BEM ESTAR DOS OUTROS');
+    I.see('PREOCUPAÇÃO EXCESSIVA PELO BEM-ESTAR DOS OUTROS');
 
     // mover o mouse para o botão medo
     I.moveCursorTo('#medo');
@@ -58,7 +58,7 @@ Scenario('teste de tela inicial com hover',  ({ I }) => {
     // verificar a cor do botão preocupacaoBemEstarAlheio e do texto
     I.seeCssPropertiesOnElements('#preocupacaoBemEstarAlheio', {
         backgroundColor: 'gray',
-        color: 'orangered'
+        color: 'orange'
     });
 
 });

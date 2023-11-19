@@ -72,7 +72,7 @@ font-size: medium;
 
 #preocupacaoBemEstarAlheio:hover{
 background-color: grey;
-color: orangered;
+color: orange;
 font-weight: 700;
 font-size: medium;
 }
@@ -178,7 +178,7 @@ font-size: medium;
 
 #preocupacaoBemEstarAlheio{
 background-color: grey;
-color: orangered;
+color: orange;
 font-weight: 700;
 font-size: medium;
 }
@@ -257,7 +257,7 @@ height: auto;
 
   .preocupacaoBemEstarAlheio:hover{
     background-color: grey;
-    color: orangered;
+    color: orange;
     font-weight: 700;
     font-size: medium;
   }
@@ -310,7 +310,7 @@ height: auto;
 
 #preocupacaoBemEstarAlheio:hover{
   background-color: grey;
-  color: orangered;
+  color: orange;
   font-weight: 700;
   font-size: medium;
 }
@@ -424,7 +424,7 @@ h1:hover{
 
 #preocupacaoBemEstarAlheio{
   background-color: grey;
-  color: orangered;
+  color: orange;
   font-weight: 700;
   font-size: medium;
 }
