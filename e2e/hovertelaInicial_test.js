@@ -1,4 +1,4 @@
-Feature('teste de florais');
+Feature('hover de botões de teste de florais');
 
 Scenario('teste de tela inicial com hover',  ({ I }) => {
     I.amOnPage('http://127.0.0.1:5500/html/index.html');
