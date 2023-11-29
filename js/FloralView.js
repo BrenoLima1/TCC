@@ -133,9 +133,6 @@ export class FloralView{
             Object.assign(a, {innerText: 'Detalhes', id: 'detalhes', href :"https://www.bachcentre.com/pt/os-florais/os-38-remedios/" + target.id, target: '_blank'});
             a.classList.add('mdl-button', 'mdl-button--colored', 'mdl-js-button', 'mdl-js-ripple-effect');
 
-
-            // Object.assign(img,{src: `../style/img/florais/${target.class}/${target.id}.png`, alt: target.id, title: target.id, class: target.class});
-
             divActions.appendChild(a);
             divMdlCardTitle.appendChild(h2NomeFloral);
             divCard.append(divMdlCardTitle,divTexto,divActions);
