@@ -97,7 +97,8 @@ export class FloralView{
                     li.remove();
                     botaoSelecionado.parentElement.style.listStyleType ='none';
                     botaoSelecionado.disabled = 'true';
-                    botaoSelecionado.style.color = 'red';
+                    botaoSelecionado.style.color = 'black';
+                    botaoSelecionado.style.borderColor = 'red';
                     botaoSelecionado.style.fontWeight = '550';
                     botaoSelecionado.style.fontSize = 'large';
                 }
