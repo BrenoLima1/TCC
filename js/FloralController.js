@@ -37,12 +37,13 @@ class Controller {
     exibirFloral(){
         for (const button of document.querySelector('ul').childNodes) {
             button.firstChild.addEventListener('click', (event)=>{
+                const descricao = this.model.obterDescricao(event.target.id);
+
                 this.view.criarDivComTexto();
                 this.view.destacarOpcaoSelecionada(event.target);
                 this.view.removerBotoesNaoSelecionados(event.target);
                 this.view.criarBotaoVoltar();
                 this.view.exibirFlor(event.target);
-                const descricao = this.model.obterDescricao(event.target.id);
                 document.getElementsByClassName('mdl-card__supporting-text')[0].innerText = descricao;
             });
         }
