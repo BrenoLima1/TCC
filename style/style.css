@@ -56,6 +56,12 @@ font-weight: 700;
 font-size: medium;
 }
 
+#solidao:hover{
+font-weight: 700;
+font-size: medium;
+color: rgb(75, 74, 74);
+}
+
 #sensivelAInfluenciasEIdeias:hover{
 background-color: pink;
 color: rgb(10, 186, 218);
