@@ -83,7 +83,6 @@ export class FloralView{
         }
 
         destacarOpcaoSelecionada(botaoSelecionado){
-            botaoSelecionado.style.backgroundColor = '#67674c';
             botaoSelecionado.style.height = 'fit-content';
             botaoSelecionado.style.borderRadius = '8%';
             botaoSelecionado.style.borderStyle = 'solid';
