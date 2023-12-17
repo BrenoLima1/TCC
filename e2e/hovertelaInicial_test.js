@@ -25,8 +25,8 @@ Scenario('teste de tela inicial com hover',  ({ I }) => {
     I.moveCursorTo('#incerteza');
     // verificar a cor do botão incerteza e do texto
     I.seeCssPropertiesOnElements('#incerteza', {
-        backgroundColor: 'rgb(248, 248, 141)',
-        color: 'rgb(66, 66, 66)'
+        backgroundColor: 'rgb(100 137 125)',
+        color: 'rgb(41, 40, 40)'
     });
 
     // mover o mouse para o botão dPresente
@@ -35,6 +35,13 @@ Scenario('teste de tela inicial com hover',  ({ I }) => {
     I.seeCssPropertiesOnElements('#dPresente', {
         backgroundColor: 'white',
         color: 'gray'
+    });
+
+    // mover o mouse para o botão solidao
+    I.moveCursorTo('#solidao');
+    // verificar a cor do botão dPresente e do texto
+    I.seeCssPropertiesOnElements('#solidao', {
+        color: 'rgb(75, 74, 74)'
     });
 
     // mover o mouse para o botão sensivelAInfluenciasEIdeias
@@ -57,7 +64,6 @@ Scenario('teste de tela inicial com hover',  ({ I }) => {
     I.moveCursorTo('#preocupacaoBemEstarAlheio');
     // verificar a cor do botão preocupacaoBemEstarAlheio e do texto
     I.seeCssPropertiesOnElements('#preocupacaoBemEstarAlheio', {
-        backgroundColor: 'gray',
         color: 'orange'
     });
 

@@ -261,7 +261,7 @@ height: auto;
   }
 
   .preocupacaoBemEstarAlheio:hover{
-    background-color: grey;
+    /* background-color: grey; */
     color: orange;
     font-weight: 700;
     font-size: medium;
