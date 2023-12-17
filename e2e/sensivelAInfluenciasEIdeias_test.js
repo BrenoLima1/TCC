@@ -9,7 +9,7 @@ Scenario('teste para solidão',  async ({ I }) => {
     // Agrimony
     I.click({xpath: '//button[contains(text(), "Concordo em abrir mão de muito para não haver nenhuma briga ou discussão e escondo minhas preocupações por trás de humor e brincadeira.")]'});
     I.see('Agrimony');
-    I.see('Seu efeito em estados temporários de humor é o de ajudar aqueles que se estão esforçando por não enfrentar seus problemas, relativizando-os, fazendo piadas e dando falsas risadas para evitar a dolorosa realidade.');
+    I.see('Seu efeito em estados temporários de humor é o de ajudar aqueles que estão se esforçando por não enfrentar seus problemas, relativizando-os, fazendo piadas e dando falsas risadas para evitar a dolorosa realidade.');
 
     I.click('#voltar');
     I.click('#sensivelAInfluenciasEIdeias');
